@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "rpi-greskeguder"
+version = "0.1.0"
+description = ""
+authors = ["Lukas Neuenschwander <lukas.neu24@gmail.com>"]
+readme = "README.md"
+packages = [{include = "rpi_greskeguder", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+stmpy = "^0.7.5"
+paho-mqtt = "^1.6.1"
+
+[tool.poetry.scripts]
+rpi_greskeguder = "rpi_greskeguder.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
